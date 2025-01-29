@@ -1,0 +1,297 @@
+/* General Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+}
+
+/* Ensure sections span full screen height */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Set each section to be full viewport height */
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Header styling to prevent shrinkage */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: var(--secondary-bg-color);
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Spacer for header height to avoid overlap */
+.header-spacer {
+  height: 60px; /* adjust based on header height */
+}
+
+/* Nav styling */
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+
+nav a.active {
+  color: #FFD700;
+  font-weight: bold;
+}
+
+/* Button and Dark Mode Styling */
+button.cta-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.cta-btn:hover {
+  background-color: #45a049;
+}
+
+.toggle-dark-mode {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Footer at the bottom */
+footer {
+  background-color: var(--secondary-bg-color);
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* For small screens */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* General Body Styling */
+body {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+}
+
+/* Header Styling */
+.header {
+  background-color: var(--header-footer-bg);
+}
+
+/* Nav Links and Active State */
+nav a {
+  color: var(--link-color);
+  transition: color 0.3s;
+}
+
+nav a.active {
+  color: #00657e;
+  font-weight: bold;
+}
+
+/* Feature Section Background */
+section.features {
+  background-color: var(--feature-bg-color);
+  padding: 40px 20px;
+}
+
+/* Button Styling */
+button.cta-btn {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  transition: background-color 0.3s;
+}
+
+button.cta-btn:hover {
+  background-color: #45a049;
+}
+
+/* Footer Styling */
+footer {
+  background-color: var(--header-footer-bg);
+}
+
+/* Toggle Dark Mode Button Styling */
+.toggle-dark-mode {
+  color: var(--primary-text-color);
+}
+
+/* Additional Theme Spacing for Header */
+.header-spacer {
+  height: 60px;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.auth-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: var(--secondary-bg-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary-text-color);
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container label {
+  margin: 10px 0 5px;
+  color: var(--primary-text-color);
+}
+
+.auth-container input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.auth-container input:focus {
+  border-color: var(--button-bg-color);
+  outline: none;
+}
+
+.auth-container .cta-btn {
+  padding: 10px 20px;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.auth-container .cta-btn:hover {
+  background-color: #45a049;
+}
+
+.auth-container p {
+  text-align: center;
+  margin-top: 10px;
+}
+.auth-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: var(--secondary-bg-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary-text-color);
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container label {
+  margin: 10px 0 5px;
+  color: var(--primary-text-color);
+}
+
+.auth-container input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.auth-container input:focus {
+  border-color: var(--button-bg-color);
+  outline: none;
+}
+
+.auth-container .cta-btn {
+  padding: 10px 20px;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.auth-container .cta-btn:hover {
+  background-color: #45a049;
+}
+
+.auth-container p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.auth-container .toggle-link {
+  background: none;
+  border: none;
+  color: var(--link-color);
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 0;
+}
+
